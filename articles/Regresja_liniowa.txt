@@ -1,0 +1,292 @@
+Regresja liniowa – w modelowaniu statystycznym, metody oparte na liniowych kombinacjach zmiennych i parametrów dopasowujących model do danych. Dopasowana linia lub krzywa regresji reprezentuje oszacowaną wartość oczekiwaną zmiennej 
+
+
+
+y
+
+
+{\displaystyle y}
+
+ przy konkretnych wartościach innej zmiennej lub zmiennych 
+
+
+
+x
+.
+
+
+{\displaystyle x.}
+
+ W najprostszym przypadku dopasowana jest stała lub funkcja liniowa, na przykład:
+
+
+Zmienna 
+
+
+
+y
+
+
+{\displaystyle y}
+
+ jest tradycyjnie nazywana zmienną objaśnianą lub zależną. Zmienne 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ nazywa się zmiennymi objaśniającymi lub niezależnymi. Zarówno zmienne objaśniane i objaśniające mogą być wielkościami skalarnymi lub wektorami.
+
+
+Regresja w ogólności to problem estymacji warunkowej wartości oczekiwanej. Regresja liniowa jest nazywana liniową, gdyż zakładanym modelem zależności między zmiennymi zależnymi a niezależnymi jest przekształcenie liniowe (afiniczne) względem parametrów, reprezentowane w przypadku wielowymiarowym przez macierz.
+
+
+Niech dany będzie zbiór danych zaobserwowanych 
+
+
+
+{
+
+y
+
+i
+
+
+,
+
+
+x
+
+i
+1
+
+
+,
+…
+,
+
+x
+
+i
+p
+
+
+
+}
+
+i
+=
+1
+
+
+n
+
+
+.
+
+
+{\displaystyle \{y_{i},\,x_{i1},\dots ,x_{ip}\}_{i=1}^{n}.}
+
+ Model regresji liniowej zakłada, że istnieje liniowa (afiniczna) relacja pomiędzy zmienną zależną 
+
+
+
+
+y
+
+i
+
+
+
+
+{\displaystyle y_{i}}
+
+ a wektorem 
+
+
+
+p
+×
+1
+
+
+{\displaystyle p\times 1}
+
+ regresorów 
+
+
+
+
+
+x
+
+
+i
+
+
+.
+
+
+{\displaystyle \mathbf {x} _{i}.}
+
+ Zależność ta jest modelowana przez uwzględnienie składnika losowego (błędu) 
+
+
+
+
+ε
+
+i
+
+
+,
+
+
+{\displaystyle \varepsilon _{i},}
+
+ który jest zmienną losową. Dokładniej, model ten jest postaci
+
+
+gdzie 
+
+
+
+
+
+
+⊤
+
+
+
+
+{\displaystyle ^{\top }}
+
+ oznacza transpozycję, tj. 
+
+
+
+
+
+x
+
+
+i
+
+
+⊤
+
+
+
+β
+
+
+
+{\displaystyle \mathbf {x} _{i}^{\top }{\boldsymbol {\beta }}}
+
+ jest iloczynem skalarnym wektorów 
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+{\displaystyle \mathbf {x} _{i}}
+
+ oraz 
+
+
+
+
+β
+
+.
+
+
+{\displaystyle {\boldsymbol {\beta }}.}
+
+
+
+
+Powyższe 
+
+
+
+n
+
+
+{\displaystyle n}
+
+ równań można zapisać w sposób macierzowy:
+
+
+gdzie:
+
+
+Najczęściej wykorzystuje się do tego celu klasyczną metodę najmniejszych kwadratów i jej pochodne. Metoda ta jest najstarsza i najłatwiejsza do zastosowania, choć posiada wady (np. niewielką odporność na elementy odstające), które udało się usunąć w innych, mniej rozpropagowanych metodach. Są to odporne metody statystyczne, do których należy regresja medianowa i algorytmy z regularyzacją.
+
+
+Niedostateczność prostych algorytmów w ogólnym przypadku pokazuje m.in. kwartet Anscombe’a – specjalnie przygotowany zestaw czterech zbiorów danych, które mają niemal tożsame wskaźniki statystyczne (średnią i wariancję w kierunku X i Y, współczynnik korelacji oraz prostą regresji) mimo znacząco różnego charakteru danych.
+
+
+Wiele klasycznych narzędzi statystycznych opatrzonych własnymi nazwami, takich jak współczynnik korelacji 
+
+
+
+r
+
+
+{\displaystyle r}
+
+ Pearsona, ANOVA czy test t Studenta jest szczególnymi przypadkami lub aspektami modelu liniowego. Dotyczy to również licznych testów nieparametrycznych, w których przypadku zamiast surowych wartości zmiennych stosuje się rangi obserwacji[1].
+
+
+Historycznie, klasyczne narzędzia stanowiły proste, gotowe do użycia modele z dobrze opisanymi właściwościami. W wielu przypadkach wymagają one jedynie obliczenia kilku średnich arytmetycznych, ignorując tym samym większość informacji zawartych w danych. W ortodoksyjnym podejściu częstościowym test realizuje się następnie z reguły przez określenie prawdopodobieństwa danych przy założeniu modelu zerowego: o odpowiedniej dla sytuacji strukturze, ale zakładającego zerowe zależności. Modele zerowe dla klasycznych testów mają dobrze znane rozkłady prawdopodobieństwa, i wykonanie testu polegało na odnalezieniu odpowiedniej wartości w standardowej tabeli w podręczniku[2][3].
+
+
+Prostota technik pozwoliła na ich łatwe i powszechne stosowanie w epoce niskiej dostępności i mocy komputerów. Zwyczaj ten ukrywa jednak ich strukturalną i poznawczą banalność, i zachęca do zaniedbywania surowych założeń warunkujących ich trafność. Współcześnie statystycy mogą tworzyć i stosować modele oraz testy dużo dokładniej dopasowane do konkretnych zastosowań i ograniczeń[2][3][4][5][6].
+
+
+Poniższa tabela – oparta na pracy Lindeløva[7] – przedstawia równoważne klasycznym narzędziom modele liniowe, gdzie 
+
+
+
+D
+
+
+{\displaystyle D}
+
+ reprezentuje zmienne typu dummy, przyjmujące wartości 1 lub 0 dla obserwacji należących (lub nie) do konkretnej grupy obserwacji, 
+
+
+
+r
+a
+n
+g
+a
+(
+)
+
+
+{\displaystyle ranga()}
+
+ to funkcja mapująca surowe wartości zmiennych na ich relatywne rangi (w niektórych przypadkach ze znakiem, rozróżniając wartości ujemne i dodatnie), a 
+
+
+
+ϵ
+
+
+{\displaystyle \epsilon }
+
+ to wyraz błędu.

@@ -1,0 +1,64 @@
+Uczenie maszynowe, samouczenie się maszyn albo systemy uczące się (ang. machine learning) – obszar sztucznej inteligencji poświęcony algorytmom, które poprawiają się automatycznie poprzez doświadczenie[1], czyli ekspozycję na dane. Algorytmy uczenia maszynowego budują model matematyczny na podstawie przykładowych danych, zwanych zbiorem uczącym, w celu prognozowania lub podejmowania decyzji bez bycia zaprogramowanym explicite przez człowieka do tego celu. Algorytmy uczenia maszynowego są wykorzystywane w wielu różnych zastosowaniach, takich jak ochrona przed spamem (filtrowanie wiadomości internetowych pod kątem niechcianej korespondencji), czy rozpoznawanie obrazów, w których opracowanie konwencjonalnych algorytmów do wykonywania potrzebnych zadań jest trudne lub niewykonalne.
+
+
+Uczenie maszynowe jest konsekwencją rozwoju idei sztucznej inteligencji i metod jej wdrażania praktycznego. Dotyczy rozwoju oprogramowania stosowanego zwłaszcza w innowacyjnych technologiach i przemyśle. Odpowiednie algorytmy mają pozwolić oprogramowaniu na zautomatyzowanie procesu pozyskiwania i analizy danych do ulepszania i rozwoju własnego systemu.
+
+
+Uczenie się może być rozpatrywane jako konkretyzacja algorytmu, czyli dobór parametrów, nazywanych wiedzą lub umiejętnością. Służy do tego wiele typów metod pozyskiwania wiedzy oraz sposobów reprezentowania wiedzy.
+
+
+Ma to zapewnić zwiększanie:
+
+
+Pierwszym przykładem maszynowego uczenia się może być projekt Arthura Samuela z firmy IBM, który w latach 1952–1962 rozwijał program do szkolenia zawodników szachowych.
+
+
+Przełomem w dziedzinie sztucznej inteligencji i maszynowego uczenia się było powstanie systemu eksperckiego Dendral na Uniwersytecie Stanforda w 1965. System ten powstał w celu zautomatyzowania analizy i identyfikacji molekuł związków organicznych, które dotychczas nie były znane chemikom. Wyniki badań otrzymane dzięki systemowi Dendral były pierwszym w historii odkryciem dokonanym przez komputer, które zostało opublikowane w prasie specjalistycznej.
+
+
+W 1977 powstaje program AM (Automated Mathematician) napisany w języku programowania Lisp, którego autorem był Doug Lenat. Służył do zautomatyzowanego poszukiwania nowych praw matematycznych, korzystając z algorytmów heurystycznych. Następcą AM został, również stworzony przez Lenata, program Eurisko.
+
+
+Badania nad uczeniem maszynowym nabierają tempa od początku lat 90., kiedy Gerald Tesauro stworzył program TD-Gammon, potrafiący konkurować w grze Backgammon z mistrzami świata. Aby dojść do takiej perfekcji, program ten uczył się swojej strategii, grając jako przeciwnik w ponad milionie gier. Algorytm zaimplementowany w programie znalazł później zastosowanie w neuronauce.
+
+
+W 1997 Garri Kasparow, mistrz świata w szachach, został pokonany w tzw. miniaturze (partia trwała jedynie 19 posunięć) przez komputer Deep Blue w ostatniej z sześciu rozgrywek, w której został znacznie unowocześniony przez firmę IBM. Kasparow zarzucił firmie IBM oszustwo, kiedy odmówiła mu dostępu do historii wcześniejszych gier Deep Blue. W ten sposób Kasparow nie był w stanie analizować strategii przeciwnika, podczas gdy twórcy Deep Blue niezwykle dokładnie analizowali i opracowywali wszystkie wcześniejsze rozgrywki Kasparowa, tworząc odpowiednie algorytmy programu. Pozostało mu jedynie studiowanie sposobów gry ogólnodostępnych programów szachowych. Rosyjski szachista domagał się rewanżu, ale firma IBM nie zgodziła się i Deep Blue przeszedł na „emeryturę”. Krytycy wielokrotnie zarzucali firmie IBM, że zamiast sprawiedliwej rywalizacji szachowej mieli na celu wypromowanie swych rozwiązań technologicznych i marki.
+
+
+Koniec lat 90. obfituje w powszechne zastosowanie algorytmów uczenia maszynowego w rozwoju sieci internet i działania wyszukiwarek internetowych (Google, Yahoo, Bing).
+
+
+W 2006 ogólnodostępny program szachowy Fritz 10 pokonał mistrza świata Władimira Kramnika.
+
+
+W 2011 roku superkomputer Watson, stworzony przez IBM, wygrał w teleturnieju Jeopardy!, pokonując dwóch najlepszych graczy w historii[2].
+
+
+Uczenie się w kontekście sztucznej inteligencji oraz automatyki rozumiane jest inaczej niż tradycyjnie. Proces uczenia się systemu ma za zadanie osiągnięcie rezultatów opartych na wiedzy fragmentarycznej, umożliwiać doskonalenie się, tworzyć nowe pojęcia oraz wnioskować indukcyjnie.
+
+
+Uczenie maszynowe w teorii ma prowadzić do określonych celów m.in.:
+
+
+Ogólne zastosowanie maszynowego uczenia się to m.in.:
+
+
+Uczenie maszynowe wciąż się rozwija i znajduje nowe praktyczne zastosowania. Liczba możliwych zastosowań jest niezwykle ogromna i pozwala przewidzieć, że w przyszłości każdy aspekt techniki będzie zawierać jakąś implementację algorytmów maszynowego uczenia się.
+
+
+Są to na przykład:
+
+
+Uczenie maszynowe i jego powodzenie zależy od wyboru odpowiedniej metody formułującej problem, zbioru uczącego (czyli doświadczeń) oraz sposobu uczenia się nowych pojęć.
+
+
+Wiedza wygenerowana wyżej wymienionymi metodami może mieć postać m.in.:
+
+
+Pomimo szybkiego rozwoju w dziedzinie uczenia maszynowego, systemy nadal pozostają w jakimś stopniu zależne od człowieka. Sam proces projektowania systemu wymaga od człowieka określenia sposobów zdobywania wiedzy oraz jej reprezentacji.
+
+
+Poza etapem tworzenia systemu powstają następujące problemy:
+
+
+W związku z powyższymi problemami przyjęto[potrzebny przypis] następujące postulaty, które wiedza generowana przez systemy powinna spełniać:

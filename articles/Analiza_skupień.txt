@@ -1,0 +1,16 @@
+Grupowanie (analiza skupień, klasteryzacja) (ang. data clustering) – metoda nienadzorowanej (ang. unsupervised learning) klasyfikacji statystycznej. Jest to metoda dokonująca grupowania elementów we względnie jednorodne klasy. Podstawą grupowania w większości algorytmów jest podobieństwo pomiędzy elementami – wyrażone przy pomocy funkcji (metryki) podobieństwa.
+
+
+Poprzez grupowanie można również rozwiązać problemy z gatunku odkrywania struktury w danych oraz dokonywanie uogólniania. Grupowanie polega na wyodrębnianiu grup (klas, podzbiorów).
+
+
+Wybrane cele dokonywania grupowania są następujące:
+
+
+Pionierem analizy skupień był psycholog Robert Tryon.[1]
+
+
+Grupowanie jako jedna z metod pozyskiwania wiedzy, a tym samym eksploracji danych, jest ściśle uwarunkowana źródłem danych oraz oczekiwaną postacią rezultatów.
+
+
+Algorytmy analizy skupień dzieli się na kilka podstawowych kategorii:

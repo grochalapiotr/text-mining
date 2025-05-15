@@ -1,0 +1,7 @@
+Rekurencyjna sieć neuronowa (ang. recurrent neural network, RNN) – klasa sieci neuronowych, w której sygnał otrzymany na wyjściu sieci trafia powtórnie na jej wejście (taki obieg sygnału zwany jest sprzężeniem zwrotnym)[1].
+
+
+Jednorazowe pobudzenie struktury ze sprzężeniem zwrotnym może generować całą sekwencję nowych zjawisk i sygnałów, ponieważ sygnały z wyjścia sieci trafiają ponownie na jej wejścia, generując nowe sygnały aż do ustabilizowania się sygnałów wyjściowych[1].
+
+
+Takiemu przebiegowi sygnałów wyjściowych wszystkich neuronów, powstającemu w sieci spontanicznie i nie poddającemu się żadnej kontroli, towarzyszą często oscylacje, gwałtowne narastanie sygnałów (wręcz do nieskończoności) lub ich gradientowe znikanie aż do całkowitego wyzerowania całej sieci. Szczególnie skomplikowane są procesy powstawania i rozwoju chaosu, z którymi w takiej sieci też często miewamy do czynienia[1][2]. Rozwiązaniem tego problemu jest długa pamięć krótkotrwała (LSTM)[3].

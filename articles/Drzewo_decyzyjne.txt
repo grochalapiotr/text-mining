@@ -1,0 +1,126 @@
+Drzewo decyzyjne – graficzna metoda wspomagania procesu decyzyjnego, stosowana w teorii decyzji. Algorytm drzew decyzyjnych jest również stosowany w uczeniu maszynowym do pozyskiwania wiedzy na podstawie przykładów.
+
+
+Drzewo decyzyjne jest przydatnym sposobem prezentowania procesu decyzyjnego, związanych w nim zdarzeń losowych i możliwych różnych wariantów decyzji w warunkach niepewności i ryzyka[1].
+
+
+W teorii decyzji drzewo decyzyjne jest drzewem decyzji i ich możliwych konsekwencji (stanów natury). Zadaniem drzew decyzyjnych może być zarówno stworzenie planu, jak i rozwiązanie problemu decyzyjnego.
+
+
+Metoda drzew decyzyjnych jest szczególnie przydatna w problemach decyzyjnych z licznymi, rozgałęziającymi się wariantami oraz w przypadku podejmowania decyzji w warunkach ryzyka.
+
+
+Rozpocznijmy od przykładu, który rozwiążemy przy pomocy drzewa decyzyjnego:
+
+
+Student Leszek obudził się 25 minut przed egzaminem. Profesor był formalistą i nawet minuta spóźnienia wykluczała możliwość pisania egzaminu, Leszkowi groziła więc sesja poprawkowa. Sprawa była jednak znacznie bardziej skomplikowana, gdyż Leszek miał zamiar wyjechać do pracy do Stanów Zjednoczonych, zaś wcześniejszy powrót we wrześniu oznaczałby dla niego utratę 4000 zł zarobków. Jeżeli jednak zdążyłby dotrzeć na czas, to rodzice w nagrodę za dobre oceny kupiliby mu prezent (zazwyczaj wartości 500 zł).
+
+
+Leszek musiał więc starannie przemyśleć, w jaki sposób dotrzeć do szkoły. Autobus nie wchodził w grę, jazda nim zajmowała co najmniej 40 minut. Pozostawała jeszcze inna możliwość – pożyczyć samochód ojca. Samochód ten jednak był w kiepskim stanie i szanse na dojechanie do szkoły wynosiły 90%, zaś w przypadku awarii Leszek musiałby pokryć część kosztów naprawy, gdyż ojciec od dawna winił go za zły stan samochodu (3 tys. zł). Oprócz tego musiał zdecydować, czy opłaca się jechać przez miasto szybko, czy wolno. Przy wolnej jeździe dotarłby na czas z prawdopodobieństwem 60%, natomiast przy szybkiej zdążyłby na pewno (Leszek potrafił naprawdę szybko jeździć). Mógł jednak zostać zatrzymany przez patrol policji, co groziło mandatem w wysokości 500 zł (prawdopodobieństwa trafienia na patrol – 20%).
+
+
+Druga możliwość to wynajęcie taksówki, za którą trzeba będzie zapłacić 30 zł. Jednak taksówkę trzeba będzie znaleźć w ciągu kilku minut, co można wykonać z prawdopodobieństwem sukcesu 80% (jeżeli nie będzie taksówki w pobliżu, Leszek już nie zdąży). Aby ponaglić kierowcę, Leszek może wręczyć napiwek w wysokości 20 zł, co zwiększy szanse na dotarcie na czas do 85% (w przeciwnym wypadku tylko 70%).
+
+
+Jaką decyzję powinien podjąć Leszek?
+
+
+Drzewo składa się z węzłów (decyzji i stanów natury) i gałęzi (możliwych wariantów). Tradycyjnie decyzje oznaczamy prostokątami, natomiast stany natury kołami.
+
+
+Konstrukcję drzewa rozpoczynamy od korzenia. Na początku Leszek ma do wyboru: samochód lub taksówkę.
+
+
+
+
+
+Rozpatrzmy węzeł samochód. Mamy do czynienia z dwoma stanami natury: samochód zepsuje się lub dojedzie. Sytuacja, w której samochód zepsuje się, jest jednocześnie węzłem końcowym, gdyż Leszek nie ma już żadnego wyboru:
+
+
+
+
+
+W ten sposób kontynuujemy konstrukcję całego drzewa.
+
+
+W prawidłowo skonstruowanym drzewie węzły decyzyjne i stanów natury powinny występować na przemian, zaś każda ścieżka powinna być zakończona węzłem końcowym.
+
+
+Rozwiązywanie problemu przy pomocy drzewa decyzyjnego rozpoczynamy od węzłów końcowych tego drzewa, przypisując im końcowe wypłaty. Przykładowo, dla sekwencji: taksówka → znajdzie → napiwek → zdąży, końcowa wypłata wynosi 4000 zł (zarobek w Stanach) + 500 zł (prezent) – 30 zł (koszt taksówki) – 20 zł (napiwek) = 4450 zł.
+
+
+Następnym krokiem jest zaznaczenie przy gałęziach wychodzących ze stanów natury odpowiadających im prawdopodobieństw. Na przykład dla węzła nr 6 prawdopodobieństwa wynoszą: policja – 0,2, uda się – 0,8.
+
+
+Kolejny krok to wyznaczenie dla każdego węzła – stanu natury wartości oczekiwanej. Np. dla węzła nr 6 wartość oczekiwana wyniesie: 0,2 · (−500) zł + 0,8 · 4500 zł = 3500 zł. Przy każdym węźle decyzyjnym zapisujemy największą wartość z wyznaczonych wartości oczekiwanych (odpowiada to najkorzystniejszej decyzji). Teraz podczas cofania się po drzewie do korzenia wypełniamy kolejno wszystkie węzły:
+
+
+Optymalna ścieżka decyzji jest wyznaczona przez największe wartości oczekiwane.
+
+
+W podanym przykładzie z obliczeń wynika, że Leszek powinien poszukać taksówki i dać taksówkarzowi napiwek.
+
+
+Drzewa decyzyjne w uczeniu maszynowym służą do wyodrębniania wiedzy z zestawu przykładów (patrz eksploracja danych). Zakładamy, że posiadamy zestaw przykładów: obiektów opisanych przy pomocy atrybutów, którym przyporządkowujemy jakąś decyzję (patrz tabela decyzyjna).
+
+
+Chcemy zautomatyzować proces przyjmowania kandydatów na praktyki w dużej firmie. Posiadamy setki przykładów z przeszłości, chcemy wydobyć z nich reguły decyzyjne. Atrybuty Wykształcenie, Języki obce, Doświadczenie i Ogólne wrażenie są kodowane skalą od 1 do 5.
+
+
+Na podstawie tabeli decyzyjnej tworzymy drzewo, którego węzłami są poszczególne atrybuty, gałęziami wartości odpowiadające tym atrybutom, a liście tworzą poszczególne decyzje. Na podstawie przykładowych danych wygenerowano następujące drzewo:
+
+
+
+
+
+Drzewo w takiej postaci odzwierciedla, w jaki sposób na podstawie atrybutów były podejmowane decyzje klasyfikujące (dla uproszczenia połączono niektóre gałęzie). Zaletą tej reprezentacji jest jej czytelność dla człowieka. W prosty sposób można przekształcić ją do reprezentacji regułowej.
+
+
+Algorytm działa rekurencyjnie dla każdego węzła drzewa. Musimy podjąć decyzję, czy węzeł będzie:
+
+
+Wszystkie algorytmy działają według podanego schematu, różnice w implementacji dotyczą kryteriów stopu i wyboru atrybutu.
+
+
+Odmianą drzew decyzyjnych są diagramy decyzyjne (ang. decision diagrams). Od drzew decyzyjnych różnią się tym, że do danego węzła można dojść więcej niż jedną drogą.
+
+
+Diagramy decyzyjne pozwalają zaoszczędzić pamięć w przypadku bardzo rozbudowanych drzew, w których określone poddrzewa powtarzają się w wielu miejscach. Powoduje to, że są użyteczne w dziedzinach bardziej sformalizowanych (np. w automatycznej analizie poprawności oprogramowania), jednak nie są stosowane w statystyce, gdzie na skutek losowych błędów w danych poddrzewa prawie nigdy nie są identyczne.
+
+
+Przykład: Drzewo przypisujące liczbom naturalnym, a i b z zakresu 1 do N sumę a+b posiada 
+
+
+
+1
++
+N
++
+
+N
+
+2
+
+
+
+
+{\displaystyle 1+N+N^{2}}
+
+ węzłów. Diagram decyzyjny dla tego samego problemu posiada tylko 
+
+
+
+1
++
+N
++
+2
+N
+
+
+{\displaystyle 1+N+2N}
+
+ węzłów.
+
+
+Szczególnym, często stosowanym przypadkiem diagramów decyzyjnych są binarne diagramy decyzyjne (binary decision diagrams, BDD), w których każdy węzeł niebędący liściem ma dokładnie dwóch potomków.

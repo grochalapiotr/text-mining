@@ -1,0 +1,53 @@
+Konwolucyjna sieć neuronowa, splotowa sieć neuronowa[1] (ang. Convolutional Neural Network, CNN) – rodzaj jednokierunkowej sieci neuronowej, która uczy się poprzez optymalizację filtrów (lub jądra). Ten typ sieci głębokiego uczenia został zastosowany do przetwarzania i tworzenia prognoz na podstawie wielu różnych typów danych, w tym tekstu, obrazów i dźwięku[2]. Konwolucyjne sieci neuronowe są de facto standardem w widzeniu komputerowym opartym na uczeniu głębokim[3] i przetwarzaniu obrazu, jednak wraz z popularyzacją nowych architektur jak transformator, znajdowane są alternatywy[4][5].
+
+
+Sieci konwolucyjne zostały zainspirowane procesami biologicznymi[6][7], ponieważ wzór połączeń między neuronami przypomina organizację  kory wzrokowej. Pojedyncze neurony korowe reagują na bodźce tylko w ograniczonym obszarze pola widzenia, zwanym polem recepcyjnym. Pola recepcyjne różnych neuronów częściowo zachodzą na siebie, pokrywając całe pole widzenia[7].
+
+
+W porównaniu z innymi algorytmami klasyfikacji obrazów, sieci CNN wykorzystują stosunkowo mało wstępnego przetwarzania. Oznacza to, że sieć uczy się optymalizować filtry (lub jądra) poprzez automatyczne uczenie się, podczas gdy w tradycyjnych algorytmach filtry te są opracowywane ręcznie. Upraszcza to i automatyzuje proces, zwiększając wydajność i skalowalność oraz eliminując wąskie gardła wynikające z ingerencji człowieka[8].
+
+
+Konwolucyjna sieć neuronowa składa się z warstwy wejściowej, warstw ukrytych (środkowych) i warstwy wyjściowej. W CNN warstwy ukryte obejmują jedną lub więcej warstw wykonujących konwolucje. Zazwyczaj obejmuje to warstwę wykonującą iloczyn skalarny jądra z macierzą wejściową warstwy. Produktem tym jest zazwyczaj iloczyn Frobeniusa, a jego funkcją aktywacji jest z reguły funkcja ReLU. W miarę jak jądro splotu przesuwa się wzdłuż macierzy wejściowej dla danej warstwy, operacja splotu generuje mapę cech, która z kolei tworzy dane wejściowe kolejnej warstwy. Następnie kolejne warstwy, takie jak warstwy łączenia, warstwy połączeń każdy-z-każdym i warstwy normalizacyjne[9].
+
+
+Architektura CNN składa się ze stosu odrębnych warstw, które przekształcają dane wejściowe w wyjściową (np. przechowującą wyniki zajęć) za pośrednictwem funkcji. Powszechnie stosuje się kilka różnych typów warstw. Poniżej omówiono je bardziej szczegółowo.
+
+
+Warstwa konwolucyjna stanowi podstawowy element sieci CNN. Parametry warstwy składają się z zestawu filtrów uczących się (lub jąder﻿(inne języki)), które mają małe pole wykonywania operacji ale są wykonywane na wszystkich danych wejściowych po kolei. Podczas przejścia do przodu każdy filtr jest spleciony na szerokości i wysokości objętości wejściowej, co powoduje obliczenie iloczynu skalarnego między wejściami filtra a wejściem i utworzenie dwuwymiarowej mapy aktywacji danego filtra. W rezultacie sieć uczy się filtrów, które aktywują się, gdy wykryje pewien konkretną cechę w pewnej pozycji przestrzennej w danych wejściowych[10].
+
+
+W przypadku danych wejściowych o dużym rozmiarze, takich jak obrazy, łączenie neuronów ze wszystkimi neuronami z poprzedniej warstwy jest niepraktyczne, ponieważ taka architektura sieci nie uwzględnia przestrzennej struktury danych. Sieci splotowe wykorzystują lokalną korelację przestrzenną, wymuszając rozrzedzenie pomiędzy neuronami sąsiadujących warstw: każdy neuron jest połączony tylko z małym obszarem danych wejściowych[11].
+
+
+Inną ważną koncepcją sieci CNN jest łączenie, które jest stosowane jako forma nieliniowego próbkowania w dół . Grupowanie umożliwia zmniejszenie próbkowania, ponieważ zmniejsza wymiary przestrzenne (wysokość i szerokość) map cech wejściowych, zachowując jednocześnie najważniejsze informacje. Istnieje kilka nieliniowych funkcji implementujących grupowanie, przy czym najczęściej stosowane są funkcje maksymalnego i średniego łączenia . Grupowanie polega na agregowaniu informacji z małych obszarów danych wejściowych, co powoduje tworzenie partycji mapy cech wejściowych, zwykle przy użyciu okna o stałym rozmiarze (np. 2x2) i zastosowaniu kroku (często 2) w celu przesunięcia okna w obrębie danych wejściowych[12].
+
+
+Oprócz maksymalnego grupowania, jednostki grupujące mogą używać innych funkcji, takich jak grupowanie średnie lub grupowanie zgodne z normą ℓ 2 . Historycznie rzecz biorąc, średnie łączenie było często stosowane, ale ostatnio wyszło z użycia w porównaniu z maksymalnym łączeniem, które w praktyce ogólnie sprawdza się lepiej[13].
+
+
+ReLU jest skrótem od rektyfikowanej jednostki liniowej. Termin został zaproponowany przez Alstona Householdera w 1941 r.[14] i wykorzystany w CNN przez Kunihiko Fukushimę w 1969 r.[15]. ReLU stosuje funkcję aktywacji 
+
+
+
+f
+(
+x
+)
+=
+max
+(
+0
+,
+x
+)
+
+
+{\textstyle f(x)=\max(0,x)}
+
+[16]. Skutecznie usuwa wartości ujemne z mapy aktywacji, ustawiając je na zero[17]. Wprowadza nieliniowość do funkcji decyzyjnej i całej sieci, nie wpływając przy tym na pola recepcyjne warstw konwolucyjnych. W 2011 roku Xavier Glorot, Antoine Bordes i Yoshua Bengio odkryli, że ReLU umożliwia lepsze trenowanie głębszych sieci[18] w porównaniu z powszechnie stosowanymi funkcjami aktywacji przed 2011 rokiem.
+
+
+Po zastosowaniu kilku warstw konwolucyjnych i warstw łączenia, ostateczna klasyfikacja odbywa się poprzez warstwy połączeń każdy-z-każdym. Neurony w warstwie w pełni połączonej mają połączenia ze wszystkimi aktywacjami w warstwie poprzedniej, jak widać w klasycznych sztucznych sieciach neuronowych  Ich aktywacje można zatem obliczyć jako transformację afiniczną, w której mnożenie macierzy następuje po przesunięciu odchylenia (dodanie wektorowe wyuczonego lub stałego członu odchylenia)[19][20].
+
+
+Uczenie CNN polega na adaptacji parametrów filtrów w warstwie konwolucyjnej jak i odpowiednim doborze wag w warstwie połączeń każdy-z-każdym. Z reguły używa się propagacji wstecznej do aktualizacji wartości sieci[21][22].

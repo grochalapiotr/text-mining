@@ -1,0 +1,10 @@
+Uczenie głębokie (ang. deep learning) – podkategoria uczenia maszynowego (ang. machine learning), polegająca na tworzeniu głębokich sieci neuronowych (sieci z wieloma poziomami neuronów). Techniki głębokiego uczenia mają za zadanie udoskonalić m.in. automatyczne przetwarzanie mowy, rozpoznawanie obrazów i przetwarzania języka naturalnego.
+
+
+Jednymi z najbardziej popularnych architektur sieci neuronowych są sieci rekurencyjne, sieci konwolucyjne, sieci generatywne GAN czy transformator[1][2][3].
+
+
+Wczesne formy sieci neuronowych były inspirowane metodami przetwarzania informacji i rozmieszczenia elementów komunikacji w układach narządów, szczególnie w mózgowiu człowieka, jednak aktualne sieci neuronowe nie skupiają się na modelowaniu funkcji mózgu i są postrzegane jako modele o niskim stopniu odwzorowania[4].
+
+
+Sieci neuronowe są głębokie, ponieważ struktura tych sieci składa się z wielu warstw sztucznych neuronów. Proste sieci neuronowe można zaprojektować ręcznie tak, by konkretna warstwa wykrywała konkretne cechy, a uczenie się polega na ustaleniu odpowiednich wag. W dużych sieciach neuronowych proces głębokiego uczenia jest do pewnego stopnia samodzielny - to znaczy sieć nie jest projektowana pod wykrywanie konkretnych cech, lecz wykrywa je na podstawie przetwarzania odpowiednio oznaczonych zbiorów danych. Zarówno takie zbiory, jak i sam sposób działania sieci muszą być przygotowane przez specjalistów, ale cechy wykrywa już sam program. Dzięki temu możliwe jest przetworzenie wielkiej ilości danych, a sieć może automatycznie nauczyć się reprezentacji cech wyższego poziomu, co oznacza, że mogą one wykryć skomplikowane wzorce w danych wejściowych[5][6].
